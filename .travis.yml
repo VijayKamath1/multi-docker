@@ -15,7 +15,7 @@ after_success:
      - docker build -t kamatvijay/multi-worker ./worker
 # Log into the docker CLI to push the docker images
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-# Take the docker images and push them in docker hub 
+# Take the docker images and push them in docker hub under kamatvijay
 - docker push kamatvijay/multi-client
 - docker push kamatvijay/multi-nginx
 - docker push kamatvijay/multi-server
