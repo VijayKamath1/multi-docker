@@ -20,9 +20,9 @@ after_success:
      - docker build -t vijaykamath1/multi-nginx ./nginx
      - docker build -t vijaykamath1/multi-server ./server
      - docker build -t vijaykamath1/multi-worker ./worker
-# Log into the docker CLI
+# Log into the docker CLI to push the docker images
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password -stdin
-# Take the docker images and push them in docker hub
+# Take the docker images and push them in docker hub 
 - docker push vijaykamath1/multi-client
 - docker push vijaykamath1/multi-nginx
 - docker push vijaykamath1/multi-server
